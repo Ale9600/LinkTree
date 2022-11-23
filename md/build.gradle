@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'core.md.module'
+version '0.1'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation("io.micronaut.data:micronaut-data-hibernate-jpa:3.4.2")
+    implementation("io.micronaut.sql:micronaut-jdbc-hikari")
+    implementation("jakarta.persistence:jakarta.persistence-api:2.2.3")
+    implementation("mysql:mysql-connector-java")
+    implementation("jakarta.annotation:jakarta.annotation-api")
+    implementation project (":baseLibrary")
+    compileOnly("jakarta.persistence:jakarta.persistence-api:3.0.0")
+    annotationProcessor("io.micronaut:micronaut-inject-java:1.0.0")
+}
+
+test {
+    useJUnitPlatform()
+}

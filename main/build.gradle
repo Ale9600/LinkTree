@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+}
+
+group 'core.main.module'
+version '0.1'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation project (":md")
+    implementation project(":foundation")
+}
+
+test {
+    useJUnitPlatform()
+}

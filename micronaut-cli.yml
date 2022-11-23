@@ -1,6 +1,6 @@
 applicationType: default
-defaultPackage: com.example
+defaultPackage: core.md.module
 testFramework: junit
-sourceLanguage: groovy
+sourceLanguage: java
 buildTool: gradle
-features: [annotation-api, app-name, data, data-jdbc, gradle, groovy, groovy-application, h2, hibernate-jpa, http-client, jackson-databind, jdbc-hikari, junit, logback, micronaut-build, netty-server, readme, shade, yaml]
+features: [annotation-api, app-name, data, data-jpa, gradle, h2, http-client, jackson-databind, java, java-application, jdbc-hikari, junit, logback, micronaut-build, netty-server, readme, shade, yaml]

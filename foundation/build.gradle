@@ -1,0 +1,29 @@
+plugins {
+    id 'groovy'
+}
+
+group 'base.foundation.module'
+version '0.1'
+
+repositories {
+    mavenCentral()
+    google()
+}
+
+dependencies {
+    implementation("jakarta.persistence:jakarta.persistence-api:2.2.3")
+    implementation("io.micronaut.data:micronaut-data-hibernate-jpa:3.4.2")
+    implementation("io.micronaut.reactor:micronaut-reactor")
+    implementation("io.micronaut.reactor:micronaut-reactor-http-client")
+    implementation("io.micronaut.data:micronaut-data-hibernate-jpa:3.4.2")
+    implementation("mysql:mysql-connector-java")
+    implementation("jakarta.annotation:jakarta.annotation-api")
+    implementation project (":baseLibrary")
+    compileOnly("jakarta.persistence:jakarta.persistence-api:3.0.0")
+    annotationProcessor("io.micronaut:micronaut-inject-java:1.0.0")
+    implementation 'com.google.code.findbugs:jsr305:3.0.2'
+}
+
+test {
+    useJUnitPlatform()
+}

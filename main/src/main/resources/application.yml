@@ -1,0 +1,42 @@
+micronaut:
+  application:
+    name: core
+  #enable https
+  #server:
+    #ssl:
+      #port: 8080
+      #enabled: true
+
+  security:
+    authentication: bearer
+    token:
+      jwt:
+        enabled: true
+        signatures:
+          secret:
+            generator:
+              secret: '7ok3nG3n3Rat0RRo74R3n3gNEk0TfhsS8fhcFfasFSs'
+              base64: true
+              jws-algorithm: HS256
+
+datasources:
+  default:
+    url: jdbc:mysql://localhost:3306/masterdata
+    driverClassName: com.mysql.cj.jdbc.Driver
+    username: 'test'
+    password: 'pwciaociao'
+    schema-generate: CREATE_DROP
+    dialect: MYSQL
+
+netty:
+  default:
+    allocator:
+      max-order: 3
+jpa:
+  default:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
+        show_sql: true
+        format_sql: true
