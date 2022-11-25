@@ -38,6 +38,7 @@ allprojects {
             implementation("org.mapstruct:mapstruct:1.5.2.Final")
             implementation("io.micronaut:micronaut-validation")
             implementation("io.micronaut.security:micronaut-security-jwt")
+            implementation("org.bouncycastle:bcpkix-jdk15on:1.65")
 
             //RUNTIME
             runtimeOnly("ch.qos.logback:logback-classic")
