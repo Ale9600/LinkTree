@@ -7,8 +7,6 @@ import org.hibernate.annotations.Immutable;
 public class PageDto extends DtoWithStatusAndCode {
 
     public String code;
-    public String key;
-     public String value;
    public String username;
    public String description;
    public String links;

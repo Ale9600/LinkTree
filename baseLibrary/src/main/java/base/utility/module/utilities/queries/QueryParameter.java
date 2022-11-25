@@ -34,7 +34,7 @@ public class QueryParameter {
             if (isNumeric(filters.get(entry))) {
                 retString = retString.concat("\n AND " + entry + " = " + filters.get(entry));
             } else {
-                retString = retString.concat("\n AND " + entry + " LIKE " + " \"%" + filters.get(entry) +  "%\"");
+                retString = retString.concat("\n AND " + entry + " LIKE " + " '%" + filters.get(entry) +  "%'");
             }
         }
         return retString;

@@ -53,10 +53,12 @@ public class GeneralUtility {
 
     public static boolean isValidEmail(String pEmailAddress) {
 
-        String regex = "^(?=.{1,64}@)[A-Za-z0-9_-]+(\\.[A-Za-z0-9_-]+)*@[^-][A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,})$";
+        System.out.println("EMAIL " + pEmailAddress);
 
-        return Pattern.compile(regex)
-                .matcher(pEmailAddress)
-                .matches();
+        String regexPattern = "^(?=.{1,64}@)[A-Za-z0-9_-]+(\\.[A-Za-z0-9_-]+)*@"
+                + "[^-][A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,})$";
+
+        return true;
+        //!(Pattern.compile(regexPattern).matcher(pEmailAddress).matches());
     }
 }

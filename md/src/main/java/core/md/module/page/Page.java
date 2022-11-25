@@ -17,12 +17,6 @@ public class Page extends BasicEntity{
     public String code;
 
     @Column
-    public String prova;
-
-    @Column
-    public String value;
-
-    @Column
     public String username;
 
     @Column
@@ -69,8 +63,11 @@ public class Page extends BasicEntity{
     // Queries
     public static final String QUERY_LIST = """
                                                 SELECT page.id as id,
-                                                        page.code as code
-                                                FROM %s md_page
+                                                        page.username as username,
+                                                        page.links as links,
+                                                        page.description as description
+                                                FROM %s page
+                                                LEFT JOIN core_user user ON page.username = user.username
                                             """;
 
     public static Map<String, String> queries;
@@ -78,6 +75,8 @@ public class Page extends BasicEntity{
         queries = new HashMap<>();
         queries.put("list", String.format(QUERY_LIST, getTableName()));
     }
+
+
 
     public static Map<String, String> getQueries() {
         return queries;
